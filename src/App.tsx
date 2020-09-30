@@ -44,10 +44,10 @@ const mapStateToProps = (store:RootState) => ({
   filter: store.filterReducer.filter,
 });
 
-const mapDispatchToProps = (dispatch:Dispatch<AnyAction>) => ({ 
-  onsetFilter: (filter:string) => dispatch(setFilter(filter)),
-  onclearCompleted: () => dispatch(clearCompleted()),
-});
+const mapDispatchToProps = { 
+  onsetFilter: setFilter,
+  onclearCompleted: clearCompleted,
+};
  
 
 // const mapDispatchToProps = {

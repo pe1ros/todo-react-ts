@@ -17,7 +17,7 @@ const ListTodo: React.FC<IProps> = (props) => {
       {todos && todos.map((todo, index) => (
         <ListItem
           // eslint-disable-next-line react/no-array-index-key
-          key={index}
+          key={todo.id}
           todo={todo}
         />
       ))}

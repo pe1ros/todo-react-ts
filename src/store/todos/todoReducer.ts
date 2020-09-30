@@ -4,9 +4,19 @@ import {
 
 import { TodoState, toDoReducerActions, Todo } from '../../types';
 
-const userTodos= localStorage.getItem('todos')
+function getInitialTodos(): Todo[] {
+  const localStorageTodosStr = localStorage.getItem('todos');
+  if (!localStorageTodosStr) { return []; }
+  try {
+    const todos: Todo[] = JSON.parse(localStorageTodosStr);
+    return todos;
+  } catch (err) {
+    return [];
+  }
+}
+
 const initialState: TodoState = {
-  todos:   userTodos !== null ? JSON.parse(userTodos) : [],
+  todos: getInitialTodos(),
 };
 
 
