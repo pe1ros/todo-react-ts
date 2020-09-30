@@ -94,7 +94,7 @@
     }
   }
   &__inputmodal{
-    width: 400px;
+    width: 350px;
     margin-left: 10px;
     height: 100%;
   }
@@ -115,13 +115,13 @@
   }
 }
 .Footer {
-  max-width: 550px; 
+   width: auto; 
   min-height: 40px;
   margin: auto;
   background-color: rgb(255, 255, 255); 
   text-align: center;  
-  flex-direction: row; 
   display: flex;
+  flex-direction: row; 
   &--hideFooter{
     display: none;
   }
@@ -131,12 +131,6 @@
     span{
       color: #777;
       font-size: 15px;
-    }
-  }
-  &__filter{
-    margin-left: 70px;
-    &--borderFilter{
-      border: 1px solid
     }
   }
   &__clearitems{
@@ -155,6 +149,19 @@
     color:#7e7e7e;
     font-size: 15px;
   }
+  &__filter{
+    margin-left: 70px;
+    &--borderFilter{
+      border: 1px solid;
+      
+    }
+  }  
+}
+.editMode{
+  display: none;
+}
+.notEditMode{
+  display: none;
 }
 @media screen and (max-width: 400px){
   .Footer{
@@ -180,10 +187,4 @@
       }
     }
   }
-}
-.editMode{
-  display: none;
-}
-.notEditMode{
-  display: none;
 }

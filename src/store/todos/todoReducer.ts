@@ -2,12 +2,14 @@ import {
   ADD_TODO, DELETE_TODO, TOGGLE_TODO, UPDATE_TODO, CLEAR_COMPLETED,
 } from '../constants';  
 
-import { TodoState, toDoReducerActions } from '../../types';
+import { TodoState, toDoReducerActions, Todo } from '../../types';
 
+const userTodos= localStorage.getItem('todos')
 const initialState: TodoState = {
-  todos:  [],
+  todos:   userTodos !== null ? JSON.parse(userTodos) : [],
 };
-//JSON.parse(localStorage.getItem('todos')) ||
+
+
 export function todoReducer(state: TodoState = initialState, action: toDoReducerActions): TodoState {
   switch (action.type) {
     case ADD_TODO:

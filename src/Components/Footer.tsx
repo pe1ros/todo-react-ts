@@ -55,24 +55,24 @@ const Footer: React.FC<IProps> = (props) => {
           items left
         </span>
       </div>
-      <div className="Footer__filter">
+      <div className="Footer__filter"> 
         <button
           type="button"
-          className={filter === 'All' ? borderFilter : ''}
+          style={{border:filter === SHOW_ALL ? '1px solid' : ''}}
           onClick={changeFilter}
         >
           All
         </button>
         <button
           type="button"
-          className={filter === 'Active' ? borderFilter : ''}
+          style={{border:filter === SHOW_ACTIVE ? '1px solid' : ''}}
           onClick={changeFilter}
         >
           Active
         </button>
         <button
           type="button"
-          className={filter === 'Completed' ? borderFilter : ''}
+          style={{border:filter === SHOW_COMPLETED ? '1px solid' : ''}}
           onClick={changeFilter}
         >
           Completed

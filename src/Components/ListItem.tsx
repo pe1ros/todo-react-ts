@@ -46,9 +46,9 @@ const ListItem: React.FC<IProps> = (props) => {
   if (todo.completed) {
     classNameDesc += ' listItem__description--completed ';
   }
-  const editMode = classNames({ ' editMode': !modalOpen });
-  const notEditMode = classNames({ ' notEditMode': modalOpen });
-  const completedTask = classNames({ 'listItem--completed': !todo.completed });
+  const editMode = classNames({' editMode': !modalOpen });
+  const notEditMode = classNames({' notEditMode': modalOpen });
+  const completedTask = classNames({'listItem--completed': !todo.completed });
 
   return (
     <div className="listItem">
@@ -83,7 +83,7 @@ const ListItem: React.FC<IProps> = (props) => {
       </button>
       <button
         type="button"
-        className=  { "listItem__btnclose " + notEditMode}
+        className= {"listItem__btnclose" + notEditMode}
         onClick={deleteHandler} 
       >
         X
